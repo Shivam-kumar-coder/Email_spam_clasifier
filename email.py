@@ -3,7 +3,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-df=pd.read_csv("D:/data/spam.csv")
+df=pd.read_csv("spam.csv")
 df['spam']=df['Category'].apply(lambda x:1 if x=='spam' else 0)
 v=CountVectorizer()
 x_train,x_test,y_train,y_test=train_test_split(df['Message'],df['spam'])
