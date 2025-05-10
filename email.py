@@ -7,10 +7,12 @@ df=pd.read_csv("spam.csv")
 df['spam']=df['Category'].apply(lambda x:1 if x=='spam' else 0)
 v=CountVectorizer()
 x_train,x_test,y_train,y_test=train_test_split(df['Message'],df['spam'])
-x_train_c=v.fit_transform(x_train.values)
-x_train_c.toarray()
+x=df['Message']
+y=df['spam']
+x_v=v.fit_transform(x.values)
+x_c.toarray()
 model=MultinomialNB()
-model.fit(x_train_c,y_train)
+model.fit(x_c,y)
 #mail=["i am shivam kumar"]
 
 
