@@ -10,9 +10,9 @@ x_train,x_test,y_train,y_test=train_test_split(df['Message'],df['spam'])
 x=df['Message']
 y=df['spam']
 x_v=v.fit_transform(x.values)
-x_c.toarray()
+x_v.toarray()
 model=MultinomialNB()
-model.fit(x_c,y)
+model.fit(x_v,y)
 #mail=["i am shivam kumar"]
 
 
